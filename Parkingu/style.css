@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.content{
+    width: 100%;
+}
+.contented{
+    position: relative;
+    width: 31%;
+    margin: 0 1.16%;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+}
+.contented .text-overlay{
+    background: linear-gradient(-50deg,#7770f1,#06609c);
+    width: 100%;
+    height: 99%;
+    opacity: 0;
+    transition: all 0.5 ease-in-out;
+ 
+}
+.contented:hover .text-overlay{
+    opacity: 1;
+}
+.text-details{
+    position: absolute;
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    text-align: center;
+    padding: 0 16px;
+    opacity: 0;
+    transform: translate(-50%,-50%) rotate(150deg);
+    transition: all 0.5s ease-in-out;
+}
+.contented:hover .text-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) rotate(360deg);
+
+}
+.text-title{
+   color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.text{
+    /* color: cornflowerblue; */
+    font-size: 16px;
+    padding: 0 3px;
+    line-height: 25px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Archivo', sans-serif;
+}
+.header{
+    margin-left: 20%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header span{
+    color: #1e81b0;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+    
+  }
+   a:hover{
+background-color: #d7f1fd;
+  }
+  img{
+      opacity: 0.9;
+  }
+ 
+  .centered{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color: #fff;
+  }
+  .centered:hover{
+      color: #84ccee;
+  }
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+  p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(65, 194, 199);
+  }
+  h2{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(85, 146, 148);
+  }
+  .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 10;
+  }
+  .main{
+      width: 60%;
+      margin: auto;
+      overflow: hidden;
+      border: 2px solid rgb(85, 146, 148);
+      position: relative;
+  }
+  .carousel-slide{
+      display: flex;
+      width: 100%;
+      height: 500px;
+  }
+  #prevBtn{
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      left: 5%;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      
+  }
+  #nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .footer-basic {
+  
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: #449191;
+    font-size: 15px;
+    
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.7em;
+    text-align: center;
+    bottom:0;
+  }

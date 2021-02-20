@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Parkingu</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Park<span>In</span> </h1>
+        <div class="nav">
+            <ul class="nav ">
+                <li class="nav-item">
+                    <a style="color: black;" class="nav-link active" aria-current="page" href="#">Hyrja</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: black;" class="nav-link" href="#">Parkingu</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: black;" class="nav-link" href="#">Kontakti</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: black;" class="nav-link " href="#">Rreth nesh</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <img src="img/R21ed823c6e57f6203f7005876db79679.jpg" width="100%">
+        <div class="paragrafi">
+            <p>Parking Online</p>
+            <h2>Aty Ku Makina Juaj Ndihet Sigurtë</h2>
+        </div>
+
+        <div class="contented">
+            <div class="text-overlay"></div>
+            <img src="img/tesla.jpg" />
+            <div class="text-details">
+                <h2 class="text-title">Rezervo</h2>
+
+            </div>
+        </div>
+        <div class="contented">
+            <div class="text-overlay"></div>
+            <img src="img/tesla.jpg" />
+            <div class="text-details">
+                <h2 class="text-title">Makina gjendet ketu...</h2>
+
+            </div>
+        </div>
+        <div class="contented">
+            <div class="text-overlay"></div>
+            <img src="img/tesla.jpg" />
+            <div class="text-details">
+                <h2 class="text-title">Ejani Përsëri!</h2>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="main">
+        <i class="fas fa-arrow-right" id="nextBtn"></i>
+        <i class="fas fa-arrow-left" id="prevBtn"></i>
+
+        <div class="carousel-slide">
+
+
+            <img src="img/rednitja.jpg" width="1000%" id="lastClone">
+            <img src="img/smart-parking.jpg" width="10%">
+            <img src="img/park.jpg" width="10%">
+            <img src="img/rednitja.jpg" width="10%">
+            <img src="img/smart-parking.jpg" width="10%" id="firstClone">
+
+        </div>
+    </div>
+
+
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">LeartBajrami|2021</p>
+        </footer>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+        // Button
+        const prevBtn = document.querySelector('#prevBtn');
+        const nextBtn = document.querySelector('#nextBtn');
+
+        // Counter
+        let counter = 1;
+        const size = carouselImages[0].clientWidth;
+
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+        // Button listener
+
+        nextBtn.addEventListener('click', () => {
+
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter++;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+        prevBtn.addEventListener('click', () => {
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter--;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+
+        carouselSlide.addEventListener('transitionend', () => {
+            if (carouselImages[counter].id === 'lastClone') {
+                carouselSlide.style.tranistion = "none";
+                counter = carouselImages.length - 2;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+            if (carouselImages[counter].id === 'firstClone') {
+                carouselSlide.style.tranistion = "none";
+                counter = carouselImages.length - counter;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+        });
+    </script>
+</body>
+
+</html>
